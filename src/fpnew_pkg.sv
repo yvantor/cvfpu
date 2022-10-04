@@ -25,6 +25,7 @@ package fpnew_pkg;
   // | FP16       | IEEE binary16    | 16 bit | 5        | 10
   // | FP8        | binary8          |  8 bit | 5        | 2
   // | FP16ALT    | binary16alt      | 16 bit | 8        | 7
+  // | FP8ALT     | binary8alt       |  8 bit | 4        | 3
   // *NOTE:* Add new formats only at the end of the enumeration for backwards compatibilty!
 
   // Encoding for a format
@@ -33,7 +34,7 @@ package fpnew_pkg;
     int unsigned man_bits;
   } fp_encoding_t;
 
-  localparam int unsigned NUM_FP_FORMATS = 5; // change me to add formats
+  localparam int unsigned NUM_FP_FORMATS = 6; // change me to add formats
   localparam int unsigned FP_FORMAT_BITS = $clog2(NUM_FP_FORMATS);
 
   // FP formats
@@ -42,7 +43,8 @@ package fpnew_pkg;
     FP64    = 'd1,
     FP16    = 'd2,
     FP8     = 'd3,
-    FP16ALT = 'd4
+    FP16ALT = 'd4,
+    FP8ALT  = 'd5
     // add new formats here
   } fp_format_e;
 
@@ -52,7 +54,8 @@ package fpnew_pkg;
     '{11, 52}, // IEEE binary64 (double)
     '{5,  10}, // IEEE binary16 (half)
     '{5,  2},  // custom binary8
-    '{8,  7}   // custom binary16alt
+    '{8,  7},  // custom binary16alt
+    '{4,  3}   // custom binary8alt
     // add new formats here
   };
 
