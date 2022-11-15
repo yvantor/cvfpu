@@ -62,7 +62,7 @@ package fpnew_pkg;
   typedef logic [0:NUM_FP_FORMATS-1]       fmt_logic_t;    // Logic indexed by FP format (for masks)
   typedef logic [0:NUM_FP_FORMATS-1][31:0] fmt_unsigned_t; // Unsigned indexed by FP format
 
-  localparam fmt_logic_t CPK_FORMATS = 5'b11000; // FP32 and FP64 can provide CPK only
+  localparam fmt_logic_t CPK_FORMATS = 6'b110000; // FP32 and FP64 can provide CPK only
 
   // ---------
   // INT TYPES
@@ -213,7 +213,7 @@ package fpnew_pkg;
     Width:         64,
     EnableVectors: 1'b0,
     EnableNanBox:  1'b1,
-    FpFmtMask:     5'b11000,
+    FpFmtMask:     6'b110000,
     IntFmtMask:    4'b0011
   };
 
@@ -221,7 +221,7 @@ package fpnew_pkg;
     Width:         64,
     EnableVectors: 1'b1,
     EnableNanBox:  1'b1,
-    FpFmtMask:     5'b11000,
+    FpFmtMask:     6'b110000,
     IntFmtMask:    4'b0010
   };
 
@@ -229,7 +229,7 @@ package fpnew_pkg;
     Width:         32,
     EnableVectors: 1'b0,
     EnableNanBox:  1'b1,
-    FpFmtMask:     5'b10000,
+    FpFmtMask:     6'b100000,
     IntFmtMask:    4'b0010
   };
 
@@ -237,7 +237,7 @@ package fpnew_pkg;
     Width:         64,
     EnableVectors: 1'b1,
     EnableNanBox:  1'b1,
-    FpFmtMask:     5'b11111,
+    FpFmtMask:     6'b111111,
     IntFmtMask:    4'b1111
   };
 
@@ -245,7 +245,7 @@ package fpnew_pkg;
     Width:         32,
     EnableVectors: 1'b1,
     EnableNanBox:  1'b1,
-    FpFmtMask:     5'b10111,
+    FpFmtMask:     6'b101111,
     IntFmtMask:    4'b1110
   };
 
@@ -253,7 +253,7 @@ package fpnew_pkg;
     Width:         32,
     EnableVectors: 1'b1,
     EnableNanBox:  1'b1,
-    FpFmtMask:     5'b10001,
+    FpFmtMask:     6'b100010,
     IntFmtMask:    4'b0110
   };
 
